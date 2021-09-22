@@ -1,6 +1,6 @@
-package stone.v01.token;
+package stone.ch03.token;
 
-import stone.v01.exception.StoneException;
+import stone.ch03.exception.StoneException;
 
 public abstract class Token {
 
@@ -32,7 +32,7 @@ public abstract class Token {
     }
 
     public int getNum() {
-        throw new StoneException("Not num token");
+        throw new StoneException("not num token");
     }
 
     public String getStr() {
