@@ -1,2 +1,2 @@
 rootProject.name = 'stone'
-include 'stone-ch03'
+include 'stone-ch03', 'stone-ch04'
