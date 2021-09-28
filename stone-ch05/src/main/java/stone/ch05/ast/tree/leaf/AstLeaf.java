@@ -1,14 +1,14 @@
-package stone.ch05.ast.leaf;
+package stone.ch05.ast.tree.leaf;
 
-import stone.ch05.ast.AstNode;
+import stone.ch05.ast.tree.AstTree;
 import stone.ch05.token.Token;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class AstLeaf extends AstNode {
+public class AstLeaf extends AstTree {
 
-    private static final ArrayList<AstNode> empty = new ArrayList<>();
+    private static final ArrayList<AstTree> empty = new ArrayList<>();
 
     protected Token token;
 
@@ -21,7 +21,7 @@ public class AstLeaf extends AstNode {
     }
 
     @Override
-    public AstNode child(int idx) {
+    public AstTree child(int idx) {
         throw new IndexOutOfBoundsException();
     }
 
@@ -31,7 +31,7 @@ public class AstLeaf extends AstNode {
     }
 
     @Override
-    public Iterator<AstNode> children() {
+    public Iterator<AstTree> children() {
         return empty.iterator();
     }
 

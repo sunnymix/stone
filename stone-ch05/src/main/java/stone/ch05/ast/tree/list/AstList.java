@@ -1,20 +1,20 @@
-package stone.ch05.ast.branch;
+package stone.ch05.ast.tree.list;
 
-import stone.ch05.ast.AstNode;
+import stone.ch05.ast.tree.AstTree;
 
 import java.util.Iterator;
 import java.util.List;
 
-public class AstBranch extends AstNode {
+public class AstList extends AstTree {
 
-    private final List<AstNode> children;
+    private final List<AstTree> children;
 
-    public AstBranch(List<AstNode> children) {
+    public AstList(List<AstTree> children) {
         this.children = children;
     }
 
     @Override
-    public AstNode child(int idx) {
+    public AstTree child(int idx) {
         return this.children.get(idx);
     }
 
@@ -24,13 +24,13 @@ public class AstBranch extends AstNode {
     }
 
     @Override
-    public Iterator<AstNode> children() {
+    public Iterator<AstTree> children() {
         return this.children.iterator();
     }
 
     @Override
     public int lineNum() {
-        for (AstNode nod : this.children) {
+        for (AstTree nod : this.children) {
             int lineNum = nod.lineNum();
             if (lineNum >= 0) {
                 return lineNum;

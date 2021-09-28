@@ -1,4 +1,4 @@
-package stone.ch05.ast.leaf;
+package stone.ch05.ast.tree.leaf;
 
 import stone.ch05.token.Token;
 
