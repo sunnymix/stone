@@ -3,7 +3,6 @@ package stone.ch05.token;
 import stone.ch05.exception.StoneException;
 
 public abstract class Token {
-
     public static final Token EOF = new Token(-1) {
     };
 
@@ -54,5 +53,4 @@ public abstract class Token {
     public boolean nonEOL() {
         return !isEOL();
     }
-
 }

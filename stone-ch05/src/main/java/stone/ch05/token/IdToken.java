@@ -1,7 +1,6 @@
 package stone.ch05.token;
 
 public class IdToken extends Token {
-
     private final String id;
 
     public IdToken(int lineNum, String id) {
@@ -18,5 +17,4 @@ public class IdToken extends Token {
     public String getStr() {
         return this.id;
     }
-
 }

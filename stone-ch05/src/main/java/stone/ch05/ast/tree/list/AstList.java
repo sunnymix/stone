@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class AstList extends AstTree {
-
     private final List<AstTree> children;
 
     public AstList(List<AstTree> children) {
@@ -38,5 +37,4 @@ public class AstList extends AstTree {
         }
         return -1;
     }
-
 }

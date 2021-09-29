@@ -6,7 +6,6 @@ import stone.ch05.ast.tree.leaf.AstLeaf;
 import java.util.List;
 
 public class BinaryExpr extends AstList {
-
     public BinaryExpr(List<AstTree> children) {
         super(children);
     }
@@ -22,5 +21,4 @@ public class BinaryExpr extends AstList {
     public AstTree right() {
         return this.child(2);
     }
-
 }

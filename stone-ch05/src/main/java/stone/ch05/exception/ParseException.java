@@ -5,7 +5,6 @@ import stone.ch05.token.Token;
 import java.io.IOException;
 
 public class ParseException extends Exception {
-
     public ParseException(IOException e) {
         super(e);
     }
@@ -29,5 +28,4 @@ public class ParseException extends Exception {
             return String.format("\"%s\" at line %d", token.getStr(), token.getLineNum());
         }
     }
-
 }

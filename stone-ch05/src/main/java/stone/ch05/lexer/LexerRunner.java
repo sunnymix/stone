@@ -4,7 +4,6 @@ import stone.ch05.exception.ParseException;
 import stone.ch05.token.Token;
 
 public class LexerRunner {
-
     public static void main(String[] args) throws ParseException {
         run();
     }
@@ -20,5 +19,4 @@ public class LexerRunner {
         }
         System.out.print("\nLexer exit.\n\n");
     }
-
 }

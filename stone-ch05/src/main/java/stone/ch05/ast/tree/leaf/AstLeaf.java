@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class AstLeaf extends AstTree {
-
     private static final ArrayList<AstTree> empty = new ArrayList<>();
 
     protected Token token;
@@ -39,5 +38,4 @@ public class AstLeaf extends AstTree {
     public int lineNum() {
         return this.token.getLineNum();
     }
-
 }
