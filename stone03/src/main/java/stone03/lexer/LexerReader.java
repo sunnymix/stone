@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class LexerReader extends Reader {
-
     private String buf = null;
 
     private int pos = 0;
@@ -51,5 +50,4 @@ public class LexerReader extends Reader {
             return null;
         }
     }
-
 }

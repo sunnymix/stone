@@ -1,7 +1,6 @@
 package stone03.token;
 
 public class StrToken extends Token {
-
     private final String str;
 
     public StrToken(int lineNum, String str) {

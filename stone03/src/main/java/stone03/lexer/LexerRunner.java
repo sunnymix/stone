@@ -4,7 +4,6 @@ import stone03.exception.ParseException;
 import stone03.token.Token;
 
 public class LexerRunner {
-
     public static void main(String[] args) throws ParseException {
         run();
     }
@@ -15,5 +14,4 @@ public class LexerRunner {
             System.out.printf("%s·", tok.getStr());
         }
     }
-
 }

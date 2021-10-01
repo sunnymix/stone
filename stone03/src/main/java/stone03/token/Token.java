@@ -3,7 +3,6 @@ package stone03.token;
 import stone03.exception.StoneException;
 
 public abstract class Token {
-
     public static final Token EOF = new Token(-1) {
     };
 
@@ -38,5 +37,4 @@ public abstract class Token {
     public String getStr() {
         return "";
     }
-
 }

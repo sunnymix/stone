@@ -1,7 +1,6 @@
 package stone03.token;
 
 public class NumToken extends Token {
-
     private final int num;
 
     public NumToken(int lineNum, int num) {
@@ -23,5 +22,4 @@ public class NumToken extends Token {
     public String getStr() {
         return Integer.toString(this.num);
     }
-
 }
