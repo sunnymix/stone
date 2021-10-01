@@ -1,6 +1,6 @@
-package stone.ch05.ast.tree.list;
+package stone05.ast.tree.list;
 
-import stone.ch05.ast.tree.AstTree;
+import stone05.ast.tree.AstTree;
 
 import java.util.Iterator;
 import java.util.List;

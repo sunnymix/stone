@@ -1,7 +1,7 @@
-package stone.ch05.ast.tree.leaf;
+package stone05.ast.tree.leaf;
 
-import stone.ch05.ast.tree.AstTree;
-import stone.ch05.token.Token;
+import stone05.ast.tree.AstTree;
+import stone05.token.Token;
 
 import java.util.ArrayList;
 import java.util.Iterator;

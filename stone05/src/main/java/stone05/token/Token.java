@@ -1,6 +1,6 @@
-package stone.ch05.token;
+package stone05.token;
 
-import stone.ch05.exception.StoneException;
+import stone05.exception.StoneException;
 
 public abstract class Token {
     public static final Token EOF = new Token(-1) {

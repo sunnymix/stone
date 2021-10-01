@@ -1,4 +1,4 @@
-package stone.ch05.token;
+package stone05.token;
 
 public class IdToken extends Token {
     private final String id;

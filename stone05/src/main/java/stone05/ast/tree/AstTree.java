@@ -1,4 +1,4 @@
-package stone.ch05.ast.tree;
+package stone05.ast.tree;
 
 import java.util.Iterator;
 

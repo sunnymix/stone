@@ -1,4 +1,4 @@
-package stone.ch05.exception;
+package stone05.exception;
 
 public class StoneException extends RuntimeException {
     public StoneException(String msg) {

@@ -1,6 +1,6 @@
-package stone.ch05.exception;
+package stone05.exception;
 
-import stone.ch05.token.Token;
+import stone05.token.Token;
 
 import java.io.IOException;
 

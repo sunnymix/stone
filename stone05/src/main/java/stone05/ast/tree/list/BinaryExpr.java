@@ -1,7 +1,7 @@
-package stone.ch05.ast.tree.list;
+package stone05.ast.tree.list;
 
-import stone.ch05.ast.tree.AstTree;
-import stone.ch05.ast.tree.leaf.AstLeaf;
+import stone05.ast.tree.AstTree;
+import stone05.ast.tree.leaf.AstLeaf;
 
 import java.util.List;
 

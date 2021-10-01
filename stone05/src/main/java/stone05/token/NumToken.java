@@ -1,4 +1,4 @@
-package stone.ch05.token;
+package stone05.token;
 
 public class NumToken extends Token {
     private final int num;
