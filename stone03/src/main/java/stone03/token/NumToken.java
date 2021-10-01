@@ -1,4 +1,4 @@
-package stone.ch03.token;
+package stone03.token;
 
 public class NumToken extends Token {
 

@@ -1,4 +1,4 @@
-package stone.ch03.exception;
+package stone03.exception;
 
 public class StoneException extends RuntimeException {
 

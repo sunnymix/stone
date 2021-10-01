@@ -1,4 +1,4 @@
-package stone.ch03.lexer;
+package stone03.lexer;
 
 import javax.swing.*;
 import java.io.IOException;

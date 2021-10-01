@@ -1,6 +1,6 @@
-package stone.ch03.exception;
+package stone03.exception;
 
-import stone.ch03.token.Token;
+import stone03.token.Token;
 
 import java.io.IOException;
 

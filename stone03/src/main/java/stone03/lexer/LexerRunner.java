@@ -1,7 +1,7 @@
-package stone.ch03.lexer;
+package stone03.lexer;
 
-import stone.ch03.exception.ParseException;
-import stone.ch03.token.Token;
+import stone03.exception.ParseException;
+import stone03.token.Token;
 
 public class LexerRunner {
 
