@@ -1,10 +1,10 @@
-package stone.ch04.lexer;
+package stone04.lexer;
 
-import stone.ch04.exception.ParseException;
-import stone.ch04.token.IdToken;
-import stone.ch04.token.NumToken;
-import stone.ch04.token.StrToken;
-import stone.ch04.token.Token;
+import stone04.exception.ParseException;
+import stone04.token.IdToken;
+import stone04.token.NumToken;
+import stone04.token.StrToken;
+import stone04.token.Token;
 
 import java.io.IOException;
 import java.io.LineNumberReader;

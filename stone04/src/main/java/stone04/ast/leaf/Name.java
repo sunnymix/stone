@@ -1,6 +1,6 @@
-package stone.ch04.ast.leaf;
+package stone04.ast.leaf;
 
-import stone.ch04.token.Token;
+import stone04.token.Token;
 
 public class Name extends AstLeaf {
 

@@ -1,4 +1,4 @@
-package stone.ch04.ast;
+package stone04.ast;
 
 import java.util.Iterator;
 

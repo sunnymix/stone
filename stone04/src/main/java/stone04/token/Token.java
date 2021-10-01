@@ -1,6 +1,6 @@
-package stone.ch04.token;
+package stone04.token;
 
-import stone.ch04.exception.StoneException;
+import stone04.exception.StoneException;
 
 public abstract class Token {
 

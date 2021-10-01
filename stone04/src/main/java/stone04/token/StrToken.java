@@ -1,4 +1,4 @@
-package stone.ch04.token;
+package stone04.token;
 
 public class StrToken extends Token {
 

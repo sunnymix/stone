@@ -1,7 +1,7 @@
-package stone.ch04.ast.branch;
+package stone04.ast.branch;
 
-import stone.ch04.ast.AstNode;
-import stone.ch04.ast.leaf.AstLeaf;
+import stone04.ast.AstNode;
+import stone04.ast.leaf.AstLeaf;
 
 import java.util.List;
 
