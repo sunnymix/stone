@@ -7,10 +7,10 @@ import stone05.lexer.Lexer;
 
 import java.util.List;
 
-public class Tree extends Ele {
+public class TreeEle extends Ele {
     protected Parser parser;
 
-    Tree(Parser parser) {
+    TreeEle(Parser parser) {
         this.parser = parser;
     }
 
