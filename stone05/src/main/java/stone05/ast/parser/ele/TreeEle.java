@@ -20,6 +20,6 @@ public class TreeEle extends Ele {
 
     @Override
     public boolean match(Lexer lexer) {
-        return false;
+        return parser.match(lexer);
     }
 }
