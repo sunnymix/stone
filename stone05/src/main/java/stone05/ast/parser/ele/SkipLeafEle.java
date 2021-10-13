@@ -6,8 +6,8 @@ import stone05.token.Token;
 import java.util.List;
 
 public class SkipLeafEle extends LeafEle {
-    public SkipLeafEle(String[] pat) {
-        super(pat);
+    public SkipLeafEle(String[] patterns) {
+        super(patterns);
     }
 
     @Override

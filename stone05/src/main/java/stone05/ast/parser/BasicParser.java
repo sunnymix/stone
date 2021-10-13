@@ -67,7 +67,7 @@ public class BasicParser {
         operators.add("%", 4, Operators.LEFT);
     }
 
-    public Tree parser(Lexer lexer) {
+    public Tree parse(Lexer lexer) {
         return program.parse(lexer);
     }
 }

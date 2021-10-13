@@ -26,8 +26,12 @@ public class LeafEle extends Ele {
                 }
             }
         }
-        if (patterns.length > 0) throw new ParseException(patterns[0] + " expected.", token);
-        else throw new ParseException(token);
+        if (patterns.length > 0) {
+            throw new ParseException(patterns[0] + " expected.", token);
+        }
+        else {
+            throw new ParseException(token);
+        }
     }
 
     @Override
