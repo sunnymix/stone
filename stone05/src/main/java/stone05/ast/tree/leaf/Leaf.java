@@ -38,4 +38,9 @@ public class Leaf extends Tree {
     public int lineNum() {
         return this.token.getLineNum();
     }
+
+    @Override
+    public String toString() {
+        return token.toString();
+    }
 }

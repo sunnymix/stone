@@ -10,4 +10,9 @@ public class Str extends Leaf {
     public String str() {
         return token.getStr();
     }
+
+    @Override
+    public String toString() {
+        return str();
+    }
 }

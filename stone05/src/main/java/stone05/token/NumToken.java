@@ -22,4 +22,9 @@ public class NumToken extends Token {
     public String getStr() {
         return Integer.toString(this.num);
     }
+
+    @Override
+    public String toString() {
+        return getStr();
+    }
 }

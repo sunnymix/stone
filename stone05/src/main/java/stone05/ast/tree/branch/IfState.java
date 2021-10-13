@@ -21,6 +21,7 @@ public class IfState extends Branch {
         return childrenNum() > 2 ? child(2) : null;
     }
 
+    @Override
     public String toString() {
         return String.format("(if %s %s else %s)", condition(), thenBlock(), elseBlock());
     }

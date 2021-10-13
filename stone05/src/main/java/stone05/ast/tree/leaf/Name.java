@@ -10,4 +10,9 @@ public class Name extends Leaf {
     public String name() {
         return this.token.getStr();
     }
+
+    @Override
+    public String toString() {
+        return name();
+    }
 }

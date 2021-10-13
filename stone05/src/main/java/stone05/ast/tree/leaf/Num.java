@@ -7,7 +7,12 @@ public class Num extends Leaf {
         super(token);
     }
 
-    public int value() {
+    public int num() {
         return this.token.getNum();
+    }
+
+    @Override
+    public String toString() {
+        return Integer.toString(num());
     }
 }

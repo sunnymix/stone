@@ -21,4 +21,9 @@ public class BinaryExpr extends Branch {
     public Tree right() {
         return this.child(2);
     }
+
+    @Override
+    public String toString() {
+        return String.format("(%s %s %s)", left(), op(), right());
+    }
 }

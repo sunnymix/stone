@@ -13,6 +13,7 @@ public class NegativeExpr extends Branch {
         return child(0);
     }
 
+    @Override
     public String toString() {
         return "-" + operand();
     }

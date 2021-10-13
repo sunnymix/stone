@@ -17,4 +17,9 @@ public class IdToken extends Token {
     public String getStr() {
         return this.id;
     }
+
+    @Override
+    public String toString() {
+        return getStr();
+    }
 }

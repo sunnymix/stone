@@ -17,4 +17,9 @@ public class StrToken extends Token {
     public String getStr() {
         return this.str;
     }
+
+    @Override
+    public String toString() {
+        return getStr();
+    }
 }
