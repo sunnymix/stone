@@ -1,7 +1,7 @@
 package stone05.ast.parser.ele;
 
 import stone05.ast.parser.Parser;
-import stone05.ast.tree.AstTree;
+import stone05.ast.tree.Tree;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
 
@@ -15,7 +15,7 @@ public class OrTreeEle extends Ele {
     }
 
     @Override
-    public void parse(Lexer lexer, List<AstTree> res) throws ParseException {
+    public void parse(Lexer lexer, List<Tree> res) throws ParseException {
         Parser parser = _choose(lexer);
         if (parser == null) throw new ParseException(lexer.peek(0));
         else res.add(parser.parse(lexer));

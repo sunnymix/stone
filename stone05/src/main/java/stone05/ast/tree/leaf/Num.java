@@ -2,8 +2,8 @@ package stone05.ast.tree.leaf;
 
 import stone05.token.Token;
 
-public class NumValue extends AstLeaf {
-    public NumValue(Token token) {
+public class Num extends Leaf {
+    public Num(Token token) {
         super(token);
     }
 

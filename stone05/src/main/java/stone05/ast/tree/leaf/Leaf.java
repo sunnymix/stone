@@ -1,17 +1,17 @@
 package stone05.ast.tree.leaf;
 
-import stone05.ast.tree.AstTree;
+import stone05.ast.tree.Tree;
 import stone05.token.Token;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class AstLeaf extends AstTree {
-    private static final ArrayList<AstTree> empty = new ArrayList<>();
+public class Leaf extends Tree {
+    private static final ArrayList<Tree> empty = new ArrayList<>();
 
     protected Token token;
 
-    public AstLeaf(Token token) {
+    public Leaf(Token token) {
         this.token = token;
     }
 
@@ -20,7 +20,7 @@ public class AstLeaf extends AstTree {
     }
 
     @Override
-    public AstTree child(int idx) {
+    public Tree child(int idx) {
         throw new IndexOutOfBoundsException();
     }
 
@@ -30,7 +30,7 @@ public class AstLeaf extends AstTree {
     }
 
     @Override
-    public Iterator<AstTree> children() {
+    public Iterator<Tree> children() {
         return empty.iterator();
     }
 

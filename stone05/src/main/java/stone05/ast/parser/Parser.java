@@ -1,8 +1,8 @@
 package stone05.ast.parser;
 
 import stone05.ast.parser.ele.*;
-import stone05.ast.tree.AstTree;
-import stone05.ast.tree.leaf.AstLeaf;
+import stone05.ast.tree.Tree;
+import stone05.ast.tree.leaf.Leaf;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
 
@@ -15,7 +15,7 @@ public class Parser {
 
     protected Factory factory;
 
-    public static Parser rule(Class<? extends AstTree> clazz) throws ParseException {
+    public static Parser rule(Class<? extends Tree> clazz) throws ParseException {
         return new Parser(clazz);
     }
 
@@ -23,7 +23,7 @@ public class Parser {
         return rule(null);
     }
 
-    public Parser(Class<? extends AstTree> clazz) throws ParseException {
+    public Parser(Class<? extends Tree> clazz) throws ParseException {
         reset(clazz);
     }
 
@@ -32,7 +32,7 @@ public class Parser {
         this.factory = parser.factory;
     }
 
-    public Parser reset(Class<? extends AstTree> clazz) throws ParseException {
+    public Parser reset(Class<? extends Tree> clazz) throws ParseException {
         eles = new ArrayList<>();
         factory = Factory.forAstList(clazz);
         return this;
@@ -43,8 +43,8 @@ public class Parser {
         return this;
     }
 
-    public AstTree parse(Lexer lexer) {
-        ArrayList<AstTree> trees = new ArrayList<>();
+    public Tree parse(Lexer lexer) {
+        ArrayList<Tree> trees = new ArrayList<>();
         for (Ele ele : eles) ele.parse(lexer, trees);
         return factory.make(trees);
     }
@@ -56,7 +56,7 @@ public class Parser {
 
     /* ================ DSL ================ */
 
-    public Parser num(Class<? extends AstLeaf> clazz) {
+    public Parser num(Class<? extends Leaf> clazz) {
         eles.add(new NumTokenEle(clazz));
         return this;
     }
@@ -65,7 +65,7 @@ public class Parser {
         return num(null);
     }
 
-    public Parser id(Class<? extends AstLeaf> clazz, HashSet<String> reserved) {
+    public Parser id(Class<? extends Leaf> clazz, HashSet<String> reserved) {
         eles.add(new IdTokenEle(clazz, reserved));
         return this;
     }
@@ -74,7 +74,7 @@ public class Parser {
         return id(null, reserved);
     }
 
-    public Parser str(Class<? extends AstLeaf> clazz) {
+    public Parser str(Class<? extends Leaf> clazz) {
         eles.add(new StrTokenEle(clazz));
         return this;
     }
@@ -120,7 +120,7 @@ public class Parser {
         return this;
     }
 
-    public Parser expr(Class<? extends AstTree> clazz, Parser subExpr, Operators operators) {
+    public Parser expr(Class<? extends Tree> clazz, Parser subExpr, Operators operators) {
         eles.add(new ExprEle(clazz, subExpr, operators));
         return this;
     }

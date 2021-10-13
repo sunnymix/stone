@@ -1,8 +1,8 @@
 package stone05.ast.parser.ele;
 
 import stone05.ast.parser.Parser;
-import stone05.ast.tree.AstTree;
-import stone05.ast.tree.list.AstList;
+import stone05.ast.tree.Tree;
+import stone05.ast.tree.branch.Branch;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
 
@@ -19,10 +19,10 @@ public class RepeatEle extends Ele {
     }
 
     @Override
-    public void parse(Lexer lexer, List<AstTree> res) throws ParseException {
+    public void parse(Lexer lexer, List<Tree> res) throws ParseException {
         while (parser.match(lexer)) {
-            AstTree tree = parser.parse(lexer);
-            if (tree.getClass() != AstList.class || tree.childrenNum() > 0) res.add(tree);
+            Tree tree = parser.parse(lexer);
+            if (tree.getClass() != Branch.class || tree.childrenNum() > 0) res.add(tree);
             if (onlyOnce) break;
         }
     }

@@ -1,7 +1,7 @@
 package stone05.ast.parser.ele;
 
-import stone05.ast.tree.AstTree;
-import stone05.ast.tree.leaf.AstLeaf;
+import stone05.ast.tree.Tree;
+import stone05.ast.tree.leaf.Leaf;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
 import stone05.token.Token;
@@ -16,7 +16,7 @@ public class LeafEle extends Ele {
     }
 
     @Override
-    public void parse(Lexer lexer, List<AstTree> res) throws ParseException {
+    public void parse(Lexer lexer, List<Tree> res) throws ParseException {
         Token token = lexer.read();
         if (token.isId()) {
             for (String pattern : patterns) {
@@ -41,7 +41,7 @@ public class LeafEle extends Ele {
         return false;
     }
 
-    protected void found(List<AstTree> res, Token token) {
-        res.add(new AstLeaf(token));
+    protected void found(List<Tree> res, Token token) {
+        res.add(new Leaf(token));
     }
 }

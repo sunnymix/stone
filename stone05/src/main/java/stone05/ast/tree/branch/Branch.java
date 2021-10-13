@@ -1,19 +1,19 @@
-package stone05.ast.tree.list;
+package stone05.ast.tree.branch;
 
-import stone05.ast.tree.AstTree;
+import stone05.ast.tree.Tree;
 
 import java.util.Iterator;
 import java.util.List;
 
-public class AstList extends AstTree {
-    private final List<AstTree> children;
+public class Branch extends Tree {
+    private final List<Tree> children;
 
-    public AstList(List<AstTree> children) {
+    public Branch(List<Tree> children) {
         this.children = children;
     }
 
     @Override
-    public AstTree child(int idx) {
+    public Tree child(int idx) {
         return this.children.get(idx);
     }
 
@@ -23,13 +23,13 @@ public class AstList extends AstTree {
     }
 
     @Override
-    public Iterator<AstTree> children() {
+    public Iterator<Tree> children() {
         return this.children.iterator();
     }
 
     @Override
     public int lineNum() {
-        for (AstTree nod : this.children) {
+        for (Tree nod : this.children) {
             int lineNum = nod.lineNum();
             if (lineNum >= 0) {
                 return lineNum;
