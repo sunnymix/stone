@@ -40,7 +40,6 @@ public class Lexer {
     }
 
     public Token peek(int i) throws ParseException {
-        // FIXME: 这个函数的作用是什么。
         if (_fillQue(i)) {
             return que.get(i);
         } else {

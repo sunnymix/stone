@@ -4,7 +4,7 @@ import stone05.token.Token;
 
 import java.io.IOException;
 
-public class ParseException extends Exception {
+public class ParseException extends RuntimeException {
     public ParseException(IOException e) {
         super(e);
     }
