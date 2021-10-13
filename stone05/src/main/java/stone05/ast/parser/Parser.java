@@ -2,6 +2,7 @@ package stone05.ast.parser;
 
 import stone05.ast.parser.ele.*;
 import stone05.ast.tree.Tree;
+import stone05.ast.tree.TreeFactory;
 import stone05.ast.tree.leaf.Leaf;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
@@ -13,7 +14,7 @@ import java.util.List;
 public class Parser {
     protected List<Ele> eles;
 
-    protected Factory factory;
+    protected TreeFactory treeFactory;
 
     public static Parser rule(Class<? extends Tree> clazz) throws ParseException {
         return new Parser(clazz);
@@ -29,12 +30,12 @@ public class Parser {
 
     protected Parser(Parser parser) {
         this.eles = parser.eles;
-        this.factory = parser.factory;
+        this.treeFactory = parser.treeFactory;
     }
 
     public Parser reset(Class<? extends Tree> clazz) throws ParseException {
         eles = new ArrayList<>();
-        factory = Factory.forAstList(clazz);
+        treeFactory = TreeFactory.forBranch(clazz);
         return this;
     }
 
@@ -46,7 +47,7 @@ public class Parser {
     public Tree parse(Lexer lexer) {
         ArrayList<Tree> trees = new ArrayList<>();
         for (Ele ele : eles) ele.parse(lexer, trees);
-        return factory.make(trees);
+        return treeFactory.make(trees);
     }
 
     public boolean match(Lexer lexer) throws ParseException {

@@ -1,10 +1,10 @@
 package stone05.ast.parser.ele;
 
-import stone05.ast.parser.Factory;
 import stone05.ast.parser.Operators;
 import stone05.ast.parser.Parser;
 import stone05.ast.parser.Precedence;
 import stone05.ast.tree.Tree;
+import stone05.ast.tree.TreeFactory;
 import stone05.ast.tree.leaf.Leaf;
 import stone05.exception.ParseException;
 import stone05.lexer.Lexer;
@@ -14,12 +14,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExprEle extends Ele {
-    protected Factory factory;
+    protected TreeFactory treeFactory;
     protected Parser factor;
     protected Operators ops;
 
     public ExprEle(Class<? extends Tree> clazz, Parser factor, Operators ops) {
-        this.factory = Factory.forAstList(clazz);
+        this.treeFactory = TreeFactory.forBranch(clazz);
         this.factor = factor;
         this.ops = ops;
     }
@@ -58,6 +58,6 @@ public class ExprEle extends Ele {
             right = _doShift(lexer, right, nextPrecedence.value);
         }
         trees.add(right);
-        return factory.make(trees);
+        return treeFactory.make(trees);
     }
 }
